@@ -1,4 +1,4 @@
-Example : https://long-tan-bonobo-garb.cyclic.app/
+Example : https://gleaming-bass-scarf.cyclic.app
 Apikey : Rainchy
 
 Silahkan Di Pakai :v 
