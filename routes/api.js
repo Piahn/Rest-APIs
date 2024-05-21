@@ -419,7 +419,7 @@ router.get("/download/pinterest", async (req, res, next) => {
 		res.json(loghandler.apikey);
 	}
 });
-router.get("/download/tiktok", (req, res, _next) => {
+router.get("/download/tiktok", (req, res, next) => {
 	var apikey = req.query.apikey;
 	var url = req.query.url;
 	if (!apikey) return res.json(loghandler.noapikey);
@@ -585,7 +585,7 @@ router.get("/news/tempo", async (req, res, next) => {
 			.then((data) => {
 				var result = data;
 				res.json({
-					author: "${creator}",
+					author: "Iyanzz",
 					result,
 				});
 			})
@@ -613,7 +613,7 @@ router.get("/news/antara", async (req, res, next) => {
 			.then((data) => {
 				var result = data;
 				res.json({
-					author: "${creator}",
+					author: "Iyanzz",
 					result,
 				});
 			})
@@ -635,7 +635,7 @@ router.get("/news/kumparan", async (req, res, next) => {
 			.then((data) => {
 				var result = data;
 				res.json({
-					author: "${creator}",
+					author: "Iyanzz",
 					result,
 				});
 			})
@@ -2849,7 +2849,7 @@ router.get("/other/github-stalk", async (req, res, next) => {
 			.then((data) => {
 				var result = data;
 				res.json({
-					author: "${creator}",
+					author: "Iyanzz",
 					result,
 				});
 			})
