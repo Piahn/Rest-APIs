@@ -14,7 +14,7 @@ app.use(secure);
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-	res.sendFile(__path + "/views/home.html");
+	res.sendFile('home.html', {root: path.join(__dirname, 'views')});
 });
 app.get("/docs", (req, res) => {
 	res.sendFile(__path + "/views/index.html");
