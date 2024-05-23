@@ -13,11 +13,11 @@ app.use(cors());
 app.use(secure);
 app.use(express.static("public"));
 
-app.use("/", (req, res) => {
-	res.sendFile(__path + "./views/home.html");
+app.get("/", (req, res) => {
+	res.sendFile(__path + "/views/home.html");
 });
-app.use("/docs", (req, res) => {
-	res.sendFile(__path + "./views/index.html");
+app.get("/docs", (req, res) => {
+	res.sendFile(__path + "/views/index.html");
 });
 
 app.use("/api", apirouter);
