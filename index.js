@@ -13,10 +13,10 @@ app.use(cors());
 app.use(secure);
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
 	res.sendFile(__path + "./views/home.html");
 });
-app.get("/docs", (req, res) => {
+app.use("/docs", (req, res) => {
 	res.sendFile(__path + "./views/index.html");
 });
 
