@@ -14,10 +14,10 @@ app.use(secure);
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-	res.sendFile(__path + "/views/home.html");
+	res.sendFile(__path + "./views/home.html");
 });
 app.get("/docs", (req, res) => {
-	res.sendFile(__path + "/views/index.html");
+	res.sendFile(__path + "./views/index.html");
 });
 
 app.use("/api", apirouter);
