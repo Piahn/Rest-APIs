@@ -13,11 +13,11 @@ app.use(cors());
 app.use(secure);
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-	res.sendFile('home.html', {root: path.join(__dirname, 'views')});
-});
+app get("/", async (req, res) => {
+  res.sendFile(__dirname + '/views/home.html')
+})
 app.get("/docs", (req, res) => {
-	res.sendFile(__path + "/views/index.html");
+	res.sendFile(__dirname + '/views/index.html');
 });
 
 app.use("/api", apirouter);
