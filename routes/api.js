@@ -626,6 +626,23 @@ router.get("/news/antara", async (req, res, next) => {
 		res.json(loghandler.apikey);
 	}
 });
+
+router.get("/news/list", async (req, res, next) => {
+  try {
+    const { data } = await axios.get("https://www.jadwaltv.net/");
+    let $ = cheerio.load(data);
+    let result = [];
+    $("nav#jadwaltv > ul > li").each(function () {
+      let tv = $(this).find("a > span").text().replace(" ", "");
+      result.push(tv);
+    });
+    res.json({ result: result.join(", ").split("SedangTayang")[0] });
+  } catch (err) {
+    console.log(err);
+    res.json({ error: String(err) });
+  }
+});
+
 router.get("/news/kumparan", async (req, res, next) => {
 	var apikey = req.query.apikey;
 	var url = req.query.type;
