@@ -13,7 +13,7 @@ app.use(cors());
 app.use(secure);
 app.use(express.static("public"));
 
-app get("/", async (req, res) => {
+app.get("/", async (req, res) => {
   res.sendFile(__dirname + '/views/home.html')
 })
 app.get("/docs", (req, res) => {
